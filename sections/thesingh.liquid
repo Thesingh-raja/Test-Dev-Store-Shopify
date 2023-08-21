@@ -1,0 +1,29 @@
+<div class="custom-text-section">
+  <h2> {{ section.settings.custom_text_title.all_products_count }} </h2>
+  <div>{{ section.settings.custom_text_body }}</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Text Box",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "collection",
+        "label": "collection"
+      },
+      {
+        "id": "custom_text_body",
+        "type": "richtext",
+        "label": "Add custom text below",
+        "default": "<p>Add your text here</p>"
+      }
+    ],
+    "presets": [
+      {
+        "name": "custom-text",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
